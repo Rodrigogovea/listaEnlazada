@@ -2,6 +2,7 @@ package mislistas;
 public class lista 
 {
     nodo primero;
+    String elementos = "";
     lista()
     {
         primero = null;
@@ -12,19 +13,23 @@ public class lista
         temp.siguiente = primero;
         primero = temp;
     }
-    public void mostrarElementos()
+    public String mostrarElementos()
     {
         if(verificarVacia())
-            System.out.println("Lista vacía!");
+            return "Lista vacía!";
         else
         {
+            elementos = "[";
             nodo temp = primero;
             while(temp!=null)
             {
-                System.out.println(temp.obtenerInfo());
+                //System.out.println(temp.obtenerInfo());
+                elementos+=temp.obtenerInfo() + ",";
                 temp = temp.siguiente;
             }
+            elementos+="]";
         }
+        return this.elementos;
     }
     public void eliminarElemento()
     {

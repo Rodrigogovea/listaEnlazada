@@ -11,14 +11,11 @@ public class MisListas
         miLista.insertarElemento(30);
         miLista.insertarElemento(40);
         miLista.insertarElemento(50);
+
         
-        miLista.mostrarElementos();
+        
+        System.out.println(miLista.mostrarElementos());
+
         System.out.println("");
-        
-        miLista.eliminarElemento();
-        
-        System.out.println("");
-        miLista.mostrarElementos();
-        System.out.println("hola");
     }
 }
